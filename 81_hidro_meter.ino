@@ -15,7 +15,7 @@ void pvMeasure(unsigned ts) {
   inputs[RPM] = motor_rpm;
 
   //mengukur tegangan V1 dan V2 serta masukan ke data untuk publisher
-  load_V1 = analogReadMv(DI0);
+  load_V1 = hidro_v;
   load_V2 = analogReadMv(DI1);
   inputs[V1] = load_V1;
   inputs[V2] = load_V2;

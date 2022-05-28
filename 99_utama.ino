@@ -19,8 +19,7 @@ void setup() {
 
   escopeSetup();
   optoSetup();
-  hidro_joule = 0;
-
+  hidro_joule = 0; //tampilan energi
   ioSetup();
   //Connect Wifi
   if (wifiSetup() == E_OK) {
@@ -35,11 +34,12 @@ void loop() {
     pvMeasure(hidro_p1.getPeriode());
   }
   else if (hidro_p2.isTime()) {
-    motor_rpm = optoGetRPM();
-    pvDisplay();   
-    mqttLoop(); 
+    motor_rpm = optoGetRPM(); // Mendapatkan nilai RPM dari fungsi get RPM yang dijalankan
+    pvDisplay(); // Menampilkan data ke Serial Monitor dan juga HMI  
+    mqttLoop(); // Mengatur flow data masuk-keluar dari node-red
   }
-  else if (btn1.pressed()) {
+  else if (btn1.pressed()) { //Apabila tombol ditekan akan menampilkan hasil pengukuran di serial monitor antara PVI dan Energi
+    // Kurang berguna karena sejatinya tidak ada interaksi fisik dengan escope
     // toggle mode
     hidro_display_mode = 1-hidro_display_mode;
   }
