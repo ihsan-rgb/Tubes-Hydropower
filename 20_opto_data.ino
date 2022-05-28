@@ -1,5 +1,5 @@
 /*
- * Data untuk DC motor dan Opto Coupler
+ * Data untuk Opto Coupler
  */
 
 // pin yang digunakan

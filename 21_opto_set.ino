@@ -20,7 +20,6 @@ unsigned optoGetRPM() {
   unsigned long interval = now - opto_last_time;
   opto_last_time = now;
 
-  // PERBAIKI, sesuaikan dengan rumus RPM
   return (((count/2)*60000)/(interval+1));
 }
 

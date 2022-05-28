@@ -1,7 +1,10 @@
-// LED ESP32
-const int ledPin = DO0;
+// Tab program untuk mengatur Input yang bersumber dari subscribe Node-Red
 
-//Output PWM
+
+// Kontrol Baterai
+const int Bat = DO0;
+
+//Kontrol Load dengan PWM
 //#define AO0 26 -> udah didef di depan
 // setting PWM properties
 const int freq = 5000;
@@ -9,8 +12,8 @@ const int ledChannel = 0;
 const int resolution = 8;
 
 void ioSetup(){
-  pinMode(ledPin, OUTPUT);
-  digitalWrite(ledPin, LOW);
+  pinMode(Bat, OUTPUT);
+  digitalWrite(Bat, LOW);
   
   // Konfigurasi pwm
   ledcSetup(ledChannel, freq, resolution);
