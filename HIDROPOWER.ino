@@ -1,7 +1,9 @@
-/* Program : IOT - PV HMI in Node-RED 
+/* Program : IOT - PLTA HMI in Node-RED 
  * Membaca V,I dan P dari PLTA serta V1 dan V2 pada load
- * Mengatur hidup/mati LED ESP32
+ * Mengatur Koneksi Baterai Ke rangkaian
  * Mengatur kecerahan LED 
+ * Creator : Ihsan M. Fauzan, Timothy Taro Tarigan
+ * Mengambil referensi sebagian besar dari Kode Modul 05 (Optocoupler) dan Modul 06
  * © Eko M.B
  * © Abdul Ghani
  */
